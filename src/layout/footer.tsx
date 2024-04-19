@@ -20,18 +20,18 @@ export default function Footer() {
         &copy; {new Date().getFullYear()}{" "}
         <a
           className="hover:underline"
-          href="https://mashu.dev"
+          href="https://www.polfex.io/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Matteo Celani
+         Polfex
         </a>
         . All rights reserved.
       </p>
       <div className="flex justify-center items-center space-x-1">
         {/* GitHub */}
         <a
-          href="https://github.com/matteocelani"
+          href="https://github.com/Cainuriel/next-dApp"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-300 hover:text-black hover:dark:text-black hover:bg-gray-100 dark:hover:bg-gray-600"
