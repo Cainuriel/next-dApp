@@ -41,13 +41,8 @@ import {
 // Wagmi
 import { http } from "wagmi";
 import {
-  arbitrum,
-  base,
-  mainnet,
-  optimism,
-  polygon,
-  sepolia,
-  zora,
+  bscTestnet,
+  bsc
 } from "wagmi/chains";
 
 const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_ID || "";
@@ -107,21 +102,14 @@ export const wagmiConfig = getDefaultConfig({
   projectId: projectId,
   wallets: wallets,
   chains: [
-    mainnet,
-    polygon,
-    optimism,
-    arbitrum,
-    base,
-    zora,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [sepolia] : []),
+   bsc,
+   bscTestnet,
+    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [bscTestnet] : []),
   ],
   transports: {
-    [mainnet.id]: http(),
-    [polygon.id]: http(),
-    [optimism.id]: http(),
-    [arbitrum.id]: http(),
-    [base.id]: http(),
-    [zora.id]: http(),
+    [bsc.id]: http(),
+    [bscTestnet.id]: http(),
+
   },
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
